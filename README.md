@@ -2,11 +2,11 @@
 
 ## Challenge
 
-As usual please start by forking this repo.
+You'll create an app that summarises the news.
 
 ## Project overview
 
-Your app will grab all the headlines from the Guardian newspaper API and display them on a page.  Clicking on a headline will show a summary of the article.
+Your app will grab all the headlines from the NewsAPI and display them on a page.  Clicking on a headline will show a summary of the article.
 
 ### Technologies
 
