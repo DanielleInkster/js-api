@@ -11,6 +11,6 @@ fetch(url)
     console.log(data);
     output.innerHTML="<center><img src="+`${data.articles[0].urlToImage}`+" width='280' height='180'></img>"+
                     "<h1>"+`${data.articles[0].title}`+"</h1>" +
-                    "<h3>"+ `${data.articles[0].description}`+"</h3> </center>" 
+                    "<h3>"+ `${data.articles[0].content.substring(0, 230)}`+"... </h3> </center>" 
   })
 </script>
