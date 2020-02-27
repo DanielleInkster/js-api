@@ -11,11 +11,11 @@ fetch(url)
     data.articles.forEach(article =>
     output.innerHTML += "<center><img src="+`${imageUrl(article.urlToImage)}`+" width='280' height='180'></img>"+
                     "<h1>"+`${article.title}`+"</h1>" +
-                    "<h3>"+ `${article.description}`+"... </h3> </center> <br>" 
+                    "<h3>"+ `${article.description.substring(0, 100)}`+"... </h3> </center> <br>" 
     )
   })
 }
 
 function imageUrl(img){
- return img===null ? url = 'img/no-image-png-1.png' : url = img
+ return img===null ? url = 'img/no-image.png' : url = img
 }
