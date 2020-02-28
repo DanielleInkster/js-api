@@ -12,9 +12,9 @@ fetch(url)
     output.innerHTML += "<center><img src="+`${imageUrl(article.urlToImage)}`+" width='280' height='180'></img>"+
                     "<h1> <a href="+ `${article.url}`+">" +`${article.title}`+"</a></h1>" +
                     // "<h3>"+ `${article.description.substring(0, 100)}`+"... </h3>"+
-                    "<button id = 'btn' onclick= "+`${readArticle(article)}`+"'> See More </button>" + "</center><br>" 
+                    "<button id = 'btn'> See More </button>" + "</center><br>" 
     )
-    document.getElementById('btn').addEventListener('click', readArticle(), false);
+    document.getElementById('btn').addEventListener('click', readArticle, false);
   })
 }
 
