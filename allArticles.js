@@ -13,10 +13,10 @@ fetch(url)
           output.innerHTML += "<center><img src="+`${imageUrl(article.urlToImage)}`+" width='280' height='180'></img>"+
                     "<h1> <a href="+ `${article.url}`+">" +`${article.title}`+"</a></h1>" +
                     "<h3>"+ `${article.description.substring(0, 100)}`+"... </h3>"+
-                    "<button id='"+`${index}`+"' onclick ='"+`${readArticle(index)}`+"'> See More </button>" + "</center><br>" 
+                    "<button id='"+`${index}`+"' onclick ='readArticle("+`${index}` +")'> See More </button>" + "</center><br>" 
                                    
      } )
-    // document.getElementById('btn').addEventListener('click', readArticle, false) 
+    // document.getElementById('btn').addEventListener('click', readArticle(index), false) 
 
   })
 }
@@ -27,7 +27,7 @@ function readArticle(index){
     .then((response) =>{
         return response.json();
     }).then((data) => {
-    output2.innerHTML = "<h2>"+`${data.articles[index].title}`+"<h2> <br> <p>" + `${data.articles[index].content}`+"<p>"
+    output2.innerHTML = "<h2>"+`${data.articles[index].title}`+"<h2> <br> <h4>" + `${data.articles[index].content}`+"<h4>"
   })
 }
 
