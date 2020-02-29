@@ -1,27 +1,34 @@
-
-function getArticles(){
-let output = document.querySelector('.output')
 let url = 'http://newsapi.org/v2/top-headlines?' +
           'sources=bbc-news&' +
           'apiKey=1841c0b4b8ec4bbba16000ceaef85c30';
+
+function getArticles(){
+let output = document.querySelector('.output')
+
 fetch(url)
     .then((response) =>{
         return response.json();
     }).then((data) => {
-    data.articles.forEach(article =>
-    output.innerHTML += "<center><img src="+`${imageUrl(article.urlToImage)}`+" width='280' height='180'></img>"+
+    data.articles.map(function(article, index){
+          output.innerHTML += "<center><img src="+`${imageUrl(article.urlToImage)}`+" width='280' height='180'></img>"+
                     "<h1> <a href="+ `${article.url}`+">" +`${article.title}`+"</a></h1>" +
-                    // "<h3>"+ `${article.description.substring(0, 100)}`+"... </h3>"+
-                    "<button id = 'btn'> See More </button>" + "</center><br>" 
-    )
-    document.getElementById('btn').addEventListener('click', readArticle, false);
+                    "<h3>"+ `${article.description.substring(0, 100)}`+"... </h3>"+
+                    "<button id='"+`${index}`+"' onclick ='"+`${readArticle(index)}`+"'> See More </button>" + "</center><br>" 
+                                   
+     } )
+    // document.getElementById('btn').addEventListener('click', readArticle, false) 
+
   })
 }
 
-
-function readArticle(article){
+function readArticle(index){
   let output2 = document.querySelector('.output2')
-  output2.innerHTML = "<h2>"+`${article.title}`+"<h2> <br> <p>" + `${article.description}`+"<p>"
+  fetch(url)
+    .then((response) =>{
+        return response.json();
+    }).then((data) => {
+    output2.innerHTML = "<h2>"+`${data.articles[index].title}`+"<h2> <br> <p>" + `${data.articles[index].content}`+"<p>"
+  })
 }
 
 function imageUrl(img){
