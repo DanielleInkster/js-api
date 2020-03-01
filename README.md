@@ -72,10 +72,9 @@ To make my news reading more fun
 <div class="imgContainer" float="left">
   Open page <br>
 <img src="img/openpage.png" width="400" height="300" />
-  Select an Article <br>
+  <br>Select an Article <br>
 <img src="img/readarticle.png" width="400" height="300" />  
-  Can be viewed easily on multiple devices<br>
+ <br> Can be viewed easily on multiple devices<br>
 <img src="img/ipad.png" width="400" height="300" />
-  4
 <img src="img/iphone.png" width="400" height="300" />
 </div>
