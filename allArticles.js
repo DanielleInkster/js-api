@@ -1,7 +1,3 @@
-// require('dotenv').config()
-
-// console.log(process.env)
-
 const url = 'http://newsapi.org/v2/top-headlines?' +
           'sources=bbc-news&' +
           'apiKey=1841c0b4b8ec4bbba16000ceaef85c30';
@@ -23,6 +19,10 @@ function getArticles(){
                                 "<button id='"+`${index}`+"' onclick ='readArticle("+`${index}` +");'> See More </button>" + 
                                 "</center><br><br>"                             
       } )
+
+      output.innerHTML += "<center><p style ='font-size:.75vw'> This content made available by" +
+                          "<a href ='https://newsapi.org/'> NewsAPI</a>,<br> a free resource for "+ 
+                          "open source and non-commercial projects.</p><center>"
     })
 }
 
@@ -36,7 +36,7 @@ function readArticle(index){
                         " style = 'width: 100%; max-width: 500px; height: auto;'></img> <br>"+
                         "<h1 style ='font-size:2.5vw'><a href="+ `${data.articles[index].url}`+">"+
                         `${data.articles[index].title}`+"</a><h1>"+
-                        "<h4 style='font-size:1.2vw'><brstyle='font-size:1.2vw'>" + `${data.articles[index].content}`+"<h4> </center>"
+                        "<h4 style='font-size:1.2vw'><brstyle='font-size:1.2vw'>" + `${data.articles[index].content}`+"<h4></center>"
   })
 }
 
