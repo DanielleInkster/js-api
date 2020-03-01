@@ -18,8 +18,8 @@ function getArticles(){
       data.articles.forEach(function(article, index){
             output.innerHTML += "<center><img src="+`${imageUrl(article.urlToImage)}`+
                                 " style = 'width: 100%; max-width: 350px; height: auto;'></img>"+
-                                "<h1> <a href="+ `${article.url}`+">" +`${article.title}`+"</a></h1>" +
-                                "<h3>"+ `${article.description.substring(0, 100)}`+"... </h3>"+
+                                "<h1 style ='font-size:2vw'> " +`${article.title}`+"</a></h1>" +
+                                "<h2 style ='font-size:1.3vw'>"+ `${article.description.substring(0, 100)}`+"... </h2>"+
                                 "<button id='"+`${index}`+"' onclick ='readArticle("+`${index}` +");'> See More </button>" + 
                                 "</center><br><br>"                             
       } )
@@ -33,9 +33,9 @@ function readArticle(index){
         return response.json();
     }).then((data) => {
     output2.innerHTML = "<center><img src="+`${imageUrl(data.articles[index].urlToImage)}`+
-                        " style = 'width: 100%; max-width: 300px; height: auto;'></img> <br>"+
-                        "<h1>"+`${data.articles[index].title}`+"<h1>"+
-                        "<h4><br>" + `${data.articles[index].content}`+"<h4> </center>"
+                        " style = 'width: 100%; max-width: 500px; height: auto;'></img> <br>"+
+                        "<h1 style ='font-size:2vw'><a href="+ `${data.articles[index].url}`+">"+`${data.articles[index].title}`+"</a><h1>"+
+                        "<h4 style='font-size:1.2vw'><br>" + `${data.articles[index].content}`+"<h4> </center>"
   })
 }
 
