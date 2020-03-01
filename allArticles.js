@@ -1,8 +1,13 @@
-let url = 'http://newsapi.org/v2/top-headlines?' +
+// require('dotenv').config()
+
+// console.log(process.env)
+
+const url = 'http://newsapi.org/v2/top-headlines?' +
           'sources=bbc-news&' +
           'apiKey=1841c0b4b8ec4bbba16000ceaef85c30';
-let output2 = document.querySelector('.output2')
+
 let output = document.querySelector('.output')
+let output2 = document.querySelector('.output2')
 
 function getArticles(){
 
@@ -15,9 +20,8 @@ function getArticles(){
                                 " style = 'width: 100%; max-width: 350px; height: auto;'></img>"+
                                 "<h1> <a href="+ `${article.url}`+">" +`${article.title}`+"</a></h1>" +
                                 "<h3>"+ `${article.description.substring(0, 100)}`+"... </h3>"+
-                                "<button id='"+`${index}`+"' onclick ='readArticle("+`${index}` +")'> See More </button>" + 
-                                "</center><br><br>" 
-                                    
+                                "<button id='"+`${index}`+"' onclick ='readArticle("+`${index}` +");'> See More </button>" + 
+                                "</center><br><br>"                             
       } )
     })
 }
