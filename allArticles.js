@@ -19,7 +19,7 @@ function getArticles(){
             output.innerHTML += "<center><img src="+`${imageUrl(article.urlToImage)}`+
                                 " style = 'width: 100%; max-width: 350px; height: auto;'></img>"+
                                 "<h1 style ='font-size:2vw'> " +`${article.title}`+"</a></h1>" +
-                                "<h2 style ='font-size:1.3vw'>"+ `${article.description.substring(0, 100)}`+"... </h2>"+
+                                "<h2 style ='font-size:1vw'>"+ `${article.description.substring(0, 100)}`+"... </h2>"+
                                 "<button id='"+`${index}`+"' onclick ='readArticle("+`${index}` +");'> See More </button>" + 
                                 "</center><br><br>"                             
       } )
@@ -34,8 +34,9 @@ function readArticle(index){
     }).then((data) => {
     output2.innerHTML = "<center><img src="+`${imageUrl(data.articles[index].urlToImage)}`+
                         " style = 'width: 100%; max-width: 500px; height: auto;'></img> <br>"+
-                        "<h1 style ='font-size:2vw'><a href="+ `${data.articles[index].url}`+">"+`${data.articles[index].title}`+"</a><h1>"+
-                        "<h4 style='font-size:1.2vw'><br>" + `${data.articles[index].content}`+"<h4> </center>"
+                        "<h1 style ='font-size:2.5vw'><a href="+ `${data.articles[index].url}`+">"+
+                        `${data.articles[index].title}`+"</a><h1>"+
+                        "<h4 style='font-size:1.2vw'><brstyle='font-size:1.2vw'>" + `${data.articles[index].content}`+"<h4> </center>"
   })
 }
 
