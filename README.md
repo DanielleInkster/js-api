@@ -73,8 +73,7 @@ To make my news reading more fun
   Open page
 <img src="img/openpage.png" width="400" height="300" />
   Select an Article
-<img src="img/readarticle.png" width="400" height="300" />
-  <br>
+<img src="img/readarticle.png" width="400" height="300" />  
   Can be viewed easily on multiple devices
 <img src="img/ipad.png" width="400" height="300" />
   4
