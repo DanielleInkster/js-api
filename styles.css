@@ -1,0 +1,68 @@
+body {
+    background-color: lightgray;
+    font-family: 'Bitter', serif;
+}
+
+h1.title {
+    font-size: 3vw;
+}
+
+p.date {
+    font-size:1vw;
+}
+
+div.output {
+    float:left; 
+    width: 30%; 
+    padding:20px; 
+    resize: both; 
+    overflow: auto;
+}
+
+div.container {
+    position: fixed; 
+    width:100%; 
+    resize: both; 
+    overflow: auto;
+    z-index:-1;
+}
+
+div.output2{
+     float:right;
+     width: 50%; 
+     padding-right:10%; 
+     resize: both; 
+     overflow: auto;
+}
+
+img.output1 {
+    width: 100%; 
+    max-width: 350px; 
+    height: auto;
+}
+
+img.output2 {
+    width: 100%; 
+    max-width: 500px; 
+    height: auto;
+}
+
+h1.title2 {
+    font-size:2.5vw
+}
+
+h1.sidebarTitle {
+    font-size:2vw
+}
+
+.article {
+    font-size:1.2vw
+}
+
+h2.sidebarArticle {
+    font-size:1vw
+}
+
+p.attribute {
+    font-size:.75vw
+}

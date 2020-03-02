@@ -12,15 +12,14 @@ function getArticles(){
           return response.json();
       }).then((data) => {
       data.articles.forEach(function(article, index){
-            output.innerHTML += "<center><img src="+`${imageUrl(article.urlToImage)}`+
-                                " style = 'width: 100%; max-width: 350px; height: auto;'></img>"+
-                                "<h1 style ='font-size:2vw'> " +`${article.title}`+"</a></h1>" +
-                                "<h2 style ='font-size:1vw'>"+ `${article.description.substring(0, 100)}`+"... </h2>"+
+            output.innerHTML += "<center><img class = output1 src="+`${imageUrl(article.urlToImage)}`+"></img>"+
+                                "<h1 class = 'sidebarTitle'> " +`${article.title}`+"</a></h1>" +
+                                "<h2 class = 'sidebarArticle'>"+ `${article.description.substring(0, 100)}`+"... </h2>"+
                                 "<button id='"+`${index}`+"' onclick ='readArticle("+`${index}` +");'> See More </button>" + 
                                 "</center><br><br>"                             
       } )
 
-      output.innerHTML += "<center><p style ='font-size:.75vw'> This content made available by" +
+      output.innerHTML += "<center><p class = 'attribute'> This content made available by" +
                           "<a href ='https://newsapi.org/'> NewsAPI</a>,<br> a free resource for "+ 
                           "open source and non-commercial projects.</p><center>"
     })
@@ -32,11 +31,10 @@ function readArticle(index){
     .then((response) =>{
         return response.json();
     }).then((data) => {
-    output2.innerHTML = "<center><img src="+`${imageUrl(data.articles[index].urlToImage)}`+
-                        " style = 'width: 100%; max-width: 500px; height: auto;'></img> <br>"+
-                        "<h1 style ='font-size:2.5vw'><a href="+ `${data.articles[index].url}`+">"+
+    output2.innerHTML = "<center><img class = 'output2' src="+`${imageUrl(data.articles[index].urlToImage)}`+"></img> <br>"+
+                        "<h1 class = 'title2'><a href="+ `${data.articles[index].url}`+">"+
                         `${data.articles[index].title}`+"</a><h1>"+
-                        "<h4 style='font-size:1.2vw'><brstyle='font-size:1.2vw'>" + `${data.articles[index].content}`+"<h4></center>"
+                        "<h4 class='article'><br class= 'article'>" + `${data.articles[index].content}`+"<h4></center>"
   })
 }
 

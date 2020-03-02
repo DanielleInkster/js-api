@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
   <html lang = "en">
   <head>
+   <link rel="stylesheet" href="styles.css">
    <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
-    <style>body{background-color: lightgray; font-family: 'Bitter', serif;}</style>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
@@ -10,14 +10,14 @@
   <body onload= getArticles();prnDt()>
 
       <center>
-        <h1 style='font-size: 3vw'>Today's Top Stories</h1>
-        <p class = 'date' style ='font-size:1vw'></p>
+        <h1 class = 'title'>Today's Top Stories</h1>
+        <p class = 'date'></p>
       </center>
 
-     <div class="output" style='float:left; width: 30%; padding:20px; resize: both; overflow: auto;'></div>
+     <div class="output"></div>
 
-     <div class = 'containter' style= 'position: fixed; width:100%; resize: both; overflow: auto;z-index:-1;'>
-        <div class="output2" style= 'float:right; width: 50%; padding-right:10%; resize: both; overflow: auto;'></div>
+     <div class = 'container'>
+        <div class="output2"></div>
      </div> 
 
   </body>
