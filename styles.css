@@ -32,7 +32,9 @@ div.output2{
     outline: 5px solid white;
      float:right;
      width: 50%; 
-     padding-right:10%; 
+     padding-right:5%; 
+     padding-left:5%; 
+     padding-bottom: 5%
      resize: both; 
      overflow: auto;
 }
