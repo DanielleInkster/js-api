@@ -1,6 +1,7 @@
 body {
-    background-color: lightgray;
+    background-color: black;
     font-family: 'Bitter', serif;
+    color: white
 }
 
 h1.title {
@@ -28,6 +29,7 @@ div.container {
 }
 
 div.output2{
+    outline: 5px solid white;
      float:right;
      width: 50%; 
      padding-right:10%; 
