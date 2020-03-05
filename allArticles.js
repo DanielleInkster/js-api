@@ -12,11 +12,11 @@ function getArticles(){
           return response.json();
       }).then((data) => {
       data.articles.forEach(function(article, index){
-            output.innerHTML += "<center><img id = articleImage1 src="+`${imageUrl(article.urlToImage)}`+"></img>"+
-                                "<h1 id = 'sidebarTitle'> " +`${article.title}`+"</a></h1>" +
-                                "<h2 id = 'sidebarArticle'>"+ `${article.description.substring(0, 100)}`+"... </h2>"+
+            output.innerHTML += "<div class = 'card'><img id = articleImage1 src="+`${imageUrl(article.urlToImage)}`+"></img>"+
+                                "<h1 class = 'p-2 text-center' id = 'sidebarTitle'> " +`${article.title}`+"</a></h1>" +
+                                "<h2 class = 'text-center p-2' id = 'sidebarArticle'>"+ `${article.description.substring(0, 100)}`+"... </h2>"+
                                 "<button id='"+`${index}`+"' onclick ='readArticle("+`${index}` +");'> See More </button>" + 
-                                "</center><br><br>"                             
+                                "</div><br><br>"                             
       } )
 
       output.innerHTML += "<center><p id = 'attribute'> This content made available by" +

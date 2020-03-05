@@ -23,6 +23,7 @@
 #output2{
      float:right;
      width: 70%; 
+     margin-right: 10%;
      padding-left:10%; 
      padding-right:10%;
      padding-bottom: 5%;
