@@ -31,10 +31,10 @@ function readArticle(index){
     .then((response) =>{
         return response.json();
     }).then((data) => {
-    output2.innerHTML = "<center><img class = 'output2' src="+`${imageUrl(data.articles[index].urlToImage)}`+"></img> <br>"+
-                        "<h1 class = 'title2'><a href="+ `${data.articles[index].url}`+">"+
+    output2.innerHTML = "<center><div class = 'border border-white'><img id = 'output2' src="+`${imageUrl(data.articles[index].urlToImage)}`+"></img> <br>"+
+                        "<h1 class = 'display-6'><a href="+ `${data.articles[index].url}`+">"+
                         `${data.articles[index].title}`+"</a><h1>"+
-                        "<h4 class='article'><br class= 'article'>" + `${data.articles[index].content}`+"<h4></center>"
+                        "<h4 class='article'><br class= 'article'>" + `${data.articles[index].content}`+"<h4></div></center>"
   })
 }
 

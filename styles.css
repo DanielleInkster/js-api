@@ -1,16 +1,9 @@
-body {
-    background-color: black;
-    font-family: 'Bitter', serif;
-    color: white
-}
 
-/* h1.title {
-    font-size: 3vw;
-} */
-
-/* p.date {
-    font-size:1vw;
-} */
+.jumbotron {
+    color: midnightblue;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
 
 div.output {
     float:left; 
@@ -23,19 +16,15 @@ div.output {
 div.container {
     position: fixed; 
     width:100%; 
-    resize: both; 
     overflow: auto;
     z-index:-1;
 }
 
 div.output2{
-    outline: 5px solid white;
      float:right;
-     width: 50%; 
-     padding-right:5%; 
-     padding-left:5%; 
+     width: 60%; 
+     padding-left:10%; 
      padding-bottom: 5%;
-     resize: both; 
      overflow: auto;
 }
 
@@ -45,7 +34,7 @@ img.output1 {
     height: auto;
 }
 
-img.output2 {
+#output2 {
     width: 100%; 
     max-width: 500px; 
     height: auto;
