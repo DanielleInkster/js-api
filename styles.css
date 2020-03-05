@@ -5,6 +5,11 @@
     padding-bottom: 10px !important;
   }
 
+  .bg-dark {
+    color: white;
+    font-family: Bitter
+  }
+
 #output {
     float:left; 
     width: 30%; 
