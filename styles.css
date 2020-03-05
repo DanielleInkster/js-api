@@ -5,7 +5,7 @@
     padding-bottom: 10px !important;
   }
 
-div.output {
+#output {
     float:left; 
     width: 30%; 
     padding:20px; 
@@ -13,49 +13,50 @@ div.output {
     overflow: auto;
 }
 
-div.container {
+#articleContainer {
     position: fixed; 
     width:100%; 
     overflow: auto;
     z-index:-1;
 }
 
-div.output2{
+#output2{
      float:right;
-     width: 60%; 
+     width: 70%; 
      padding-left:10%; 
+     padding-right:10%;
      padding-bottom: 5%;
      overflow: auto;
 }
 
-img.output1 {
+#articleImage1 {
     width: 100%; 
     max-width: 350px; 
     height: auto;
 }
 
-#output2 {
+#articleImage2 {
     width: 100%; 
     max-width: 500px; 
     height: auto;
 }
 
-h1.title2 {
+#title2 {
     font-size:2.5vw
 }
 
-h1.sidebarTitle {
+#sidebarTitle {
     font-size:2vw
 }
 
-.article {
+#article {
     font-size:1.2vw
 }
 
-h2.sidebarArticle {
+#sidebarArticle {
     font-size:1vw
 }
 
-p.attribute {
+#attribute {
     font-size:.75vw
 }
