@@ -37,10 +37,10 @@
 }
 
 /* Selected Article Code */
-
 #articleContainer {
     position: fixed; 
-    width:100%; 
+    width:120%; 
+    float: right;
     overflow: auto;
     z-index:-1;
 }
@@ -49,10 +49,12 @@
      float:right;
      width: 70%; 
      margin-right: 10%;
+     margin-left: 10%;
      padding-left:10%; 
      padding-right:10%;
      padding-bottom: 5%;
      overflow: auto;
+     position: sticky
 }
 
 #articleImage2 {
@@ -62,7 +64,7 @@
 }
 
 #title2 {
-    font-size:2vw
+    padding-top: 0;
 }
 
 #article {
