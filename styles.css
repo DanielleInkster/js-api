@@ -1,8 +1,6 @@
 
 .jumbotron {
     color: midnightblue;
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
     background-image: url('img/newspapers.jpg')
   }
 
@@ -54,7 +52,6 @@
      padding-right:10%;
      padding-bottom: 5%;
      overflow: auto;
-     position: sticky
 }
 
 #articleImage2 {
@@ -64,7 +61,6 @@
 }
 
 #title2 {
-    padding-top: 0;
     font-size: 2.2vw
 }
 
