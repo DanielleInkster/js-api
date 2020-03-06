@@ -12,9 +12,9 @@ function getArticles(){
           return response.json();
       }).then((data) => {
       data.articles.forEach(function(article, index){
-            output.innerHTML += "<div class = 'card bg-secondary'><img id = articleImage1 src="+`${imageUrl(article.urlToImage)}`+"></img>"+
-                                "<h1 class = 'p-2 text-center' id = 'sidebarTitle'> " +`${article.title}`+"</a></h1>" +
-                                "<h2 class = 'text-center p-2' id = 'sidebarArticle'>"+ `${article.description.substring(0, 100)}`+"... </h2>"+
+            output.innerHTML += "<div class = 'card bg-secondary p-2'><img class ='rounded mx-auto d-block' id = articleImage1 src="+`${imageUrl(article.urlToImage)}`+"></img>"+
+                                "<h1 class = 'text-center' id = 'sidebarTitle'> " +`${article.title}`+"</a></h1>" +
+                                "<h2 class = 'text-center' id = 'sidebarArticle'>"+ `${article.description.substring(0, 100)}`+"... </h2>"+
                                 "<button id='"+`${index}`+"' onclick ='readArticle("+`${index}` +");'> See More </button>" + 
                                 "</div><br>"                             
       } )
@@ -32,7 +32,7 @@ function readArticle(index){
         return response.json();
     }).then((data) => {
     output2.innerHTML = "<center><div class = 'bg-secondary p-4'><img id='articleImage2' src="+`${imageUrl(data.articles[index].urlToImage)}`+"></img>"+
-                        "<p id = 'title2'><a href="+ `${data.articles[index].url}`+">"+
+                        "<br><br><p id = 'title2'><a href="+ `${data.articles[index].url}`+">"+
                         `${data.articles[index].title}`+"</a></p>"+
                         "<h4 id='article'>" + `${data.articles[index].content}`+"<h4></div></center>"
   })
