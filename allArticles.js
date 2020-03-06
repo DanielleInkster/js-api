@@ -31,7 +31,7 @@ function readArticle(index){
     .then((response) =>{
         return response.json();
     }).then((data) => {
-    output2.innerHTML = "<center><div class = 'bg-secondary p-4'><img id='articleImage2' src="+`${imageUrl(data.articles[index].urlToImage)}`+"></img>"+
+    output2.innerHTML = "<center><div class = 'bg-secondary rounded p-4'><img class =' rounded' id='articleImage2' src="+`${imageUrl(data.articles[index].urlToImage)}`+"></img>"+
                         "<br><br><p id = 'title2'><a href="+ `${data.articles[index].url}`+">"+
                         `${data.articles[index].title}`+"</a></p>"+
                         "<h4 id='article'>" + `${data.articles[index].content}`+"<h4></div></center>"
