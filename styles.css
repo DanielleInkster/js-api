@@ -10,13 +10,33 @@
     color: white;
     font-family: Bitter
   }
-
+ /* Sidebar Code */
 #output {
     float:left; 
-    width: 30%; 
+    width: 30%;
     overflow: auto;
     padding-left: 5%;
 }
+
+#articleImage1 {
+    width: 100%; 
+    max-width: 350px; 
+    height: auto;
+}
+
+#sidebarTitle {
+    font-size:2vw
+}
+
+#sidebarArticle {
+    font-size:1vw
+}
+
+#attribute {
+    font-size:.75vw
+}
+
+/* Selected Article Code */
 
 #articleContainer {
     position: fixed; 
@@ -35,12 +55,6 @@
      overflow: auto;
 }
 
-#articleImage1 {
-    width: 100%; 
-    max-width: 350px; 
-    height: auto;
-}
-
 #articleImage2 {
     width: 100%; 
     max-width: 500px; 
@@ -48,10 +62,6 @@
 }
 
 #title2 {
-    font-size:2.0vw
-}
-
-#sidebarTitle {
     font-size:2vw
 }
 
@@ -63,10 +73,7 @@
     font-size:.1vw
 }
 
-#sidebarArticle {
-    font-size:1vw
-}
-
-#attribute {
-    font-size:.75vw
+#btn { 
+    font-size: 1vw;
+    max-height: 5%; 
 }
